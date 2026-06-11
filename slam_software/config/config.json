@@ -1,0 +1,56 @@
+{
+  "architecture": "x86",
+
+
+
+  
+  "loader_cfg": {
+    "serial_cfg": {
+      "port_name": "/dev/serial/by-id/usb-1a86_USB_Serial-if00-port0",
+      "baud_rate" : 921600,
+      "parity" : "None"
+    },
+
+
+    "timestamp_to_ns": 1e5,
+    "imu_cfg": {
+      "description": "g/s, deg/s",
+      "accel_fs": "pm2g",  
+      "accel_lsb": {
+        "pm2g" : 16384,
+        "pm4g" : 8192,
+        "pm8g" : 4096,
+        "pm16g": 2048
+      },
+
+      "gyro_fs": "pm500deg",
+      "gyro_lsb": {
+        "pm250deg": 131,
+        "pm500deg": 65.5,
+        "pm1000deg": 32.8,
+        "pm2000deg": 16.4
+      }
+    },
+    
+    "lidar_cfg": {
+      "rot_freq": 10,
+      "scan_freq": 5400,
+      "nearst_sq": 0,
+      "max_dist_sq": 25
+    }
+  },
+  "kf_cfg": {
+    "imu_nbw": 0.001,
+    "imu_nba": 0.001,
+    "imu_nw" : 0.01,
+    "imu_na" : 0.5,
+    "meas_xyz": 0.01,
+    "init_imu_msgs": 5
+  },
+
+  "lidar_processor_cfg": {
+    "feature_points": 30,
+    "window_size": 5 
+  }
+  
+}

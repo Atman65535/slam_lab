@@ -15,7 +15,11 @@ CMakeUserPresets.json
 build
 *.pdf
 *.a
+*.elf
+*.map
 *.bck
+stdlib
+.cache
 
 # CLion
 #  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
